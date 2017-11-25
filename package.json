@@ -5,11 +5,14 @@
   "author": "fantasticfbaby <1092902073@qq.com>",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev": "webpack-dev-server --inline --progress --watch --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "build": "node build/build.js"
   },
   "dependencies": {
+    "element-ui": "^2.0.5",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },

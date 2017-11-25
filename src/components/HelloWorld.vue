@@ -17,22 +17,29 @@
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
+    <el-radio v-model="radio" label="1">备选项</el-radio>
+    <el-radio v-model="radio" label="2">备选项</el-radio>
   </div>
 </template>
 
 <script>
+import ElInput from "../../node_modules/element-ui/packages/input/src/input.vue";
+
 export default {
+  components: {ElInput},
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      radio: '1'
     }
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="less">
+  @nice-blue: #5B83AD;
 h1, h2 {
   font-weight: normal;
 }
@@ -45,6 +52,10 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #42b983;
+  color: @nice-blue;
 }
+
+</style>
+<!--全局css放这里 同一组件可以全局和scope一起使用-->
+<style lang="less">
 </style>
