@@ -83,7 +83,16 @@
           id: '001',
           title: '人性的弱点',
           remark: ''
-        }]
+        },{
+          id: '002',
+          title: '第一行代码 Android 第2版',
+          remark: ''
+        },{
+          id: '003',
+          title: 'Java语言程序设计',
+          remark: ''
+        }
+        ]
       }
     },
     created() {

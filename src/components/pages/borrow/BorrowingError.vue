@@ -4,7 +4,7 @@
       <el-row>
         <el-col :span="24">
           <el-row class="infobar">
-            <span style="font-size: 20px; color: #fff;">系统正在借书，请稍后</span>
+            <span style="font-size: 20px; color: red;">请稍微动一下图书</span>
           </el-row>
         </el-col>
       </el-row>
@@ -19,6 +19,7 @@
               <template slot-scope="scope">
                 <i class="iconfont" v-if="scope.row.status == 'success'" style="color: green;">&#xe605;</i>
                 <i class="iconfont" v-else-if="scope.row.status == 'processing'" style="font-size: 25px; color: blue;">&#xe600;</i>
+                <i class="iconfont" v-else-if="scope.row.status == 'error'" style="font-size: 25px; color: red;">&#xe703;</i>
                 <i class="iconfont" v-else-if="scope.row.status == 'waiting'">&#xe6b7;</i>
               </template>
             </el-table-column>
@@ -29,6 +30,7 @@
               <template slot-scope="scope">
                 <span v-if="scope.row.status == 'success'" style="color: green;">{{scope.row.title}}</span>
                 <span v-else-if="scope.row.status == 'processing'" style="color: blue;">{{scope.row.title}}</span>
+                <span v-else-if="scope.row.status == 'error'" style="color: red;">{{scope.row.title}}</span>
                 <span v-else-if="scope.row.status == 'waiting'" style="color: gray;">{{scope.row.title}}</span>
               </template>
             </el-table-column>
@@ -38,6 +40,7 @@
               <template slot-scope="scope">
                 <span v-if="scope.row.status == 'success'" style="color: green;">成功</span>
                 <span v-else-if="scope.row.status == 'processing'" style="color: blue;">正在处理</span>
+                <span v-else-if="scope.row.status == 'error'" style="color: red;">失败,标签写入失败</span>
                 <span v-else-if="scope.row.status == 'waiting'" style="color: gray;">等待中</span>
               </template>
             </el-table-column>
@@ -46,7 +49,7 @@
         </el-col>
 
       </el-row>
-      <router-link :to="{name:'BorrowingError'}">next</router-link>
+      <router-link :to="{name:'BorrowComplete'}">next</router-link>
 
     </div>
     <div class="time">
@@ -68,7 +71,7 @@
           status: 'success'
         }, {
           title: '2.第一行代码 Android 第2版',
-          status: 'processing'
+          status: 'error'
         }, {
           title: '3.Java语言程序设计',
           status: 'waiting'

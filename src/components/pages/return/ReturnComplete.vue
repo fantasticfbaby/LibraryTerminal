@@ -12,7 +12,7 @@
         <el-col :span="21">
           <el-row style="border: 2px solid #fff; background: #44a4df; font-weight: bold">
             <el-col>
-              <p>成功:4&nbsp;&nbsp;&nbsp;失败:0</p>
+              <p>成功:3&nbsp;&nbsp;&nbsp;失败:0</p>
             </el-col>
           </el-row>
         </el-col>
@@ -23,7 +23,8 @@
           <el-table
             border
             :data="tableData"
-            style="width: 100%;">
+            style="width: 100%;"
+            :row-class-name="tableRowClassName">
             <el-table-column
               prop="id"
               label="条形码号"
@@ -67,13 +68,25 @@
       return {
         tableData: [{
           id: '001',
-          title: '图书A',
+          title: '人性的弱点',
           remark: '成功'
         }, {
           id: '002',
-          title: '图书B',
+          title: '第一行代码 Android 第2版',
+          remark: '成功'
+        }, {
+          id: '003',
+          title: 'Java语言程序设计',
           remark: '成功'
         }]
+      }
+    },
+    methods: {
+      tableRowClassName({row, rowIndex}) {
+        if (row.remark === '失败') {
+          return 'warning-row';
+        }
+        return ''
       }
     },
     components: {
@@ -129,4 +142,9 @@
 
   }
 
+</style>
+<style>
+  .el-table .warning-row {
+    background: rgb(255, 136, 173);
+  }
 </style>

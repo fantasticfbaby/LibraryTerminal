@@ -7,12 +7,14 @@ import ShowCard from 'components/pages/ShowCard'
 import Borrow from 'components/pages/borrow/Borrow'
 import BorrowComplete from 'components/pages/borrow/BorrowComplete'
 import Borrowing from 'components/pages/borrow/Borrowing'
+import BorrowingError from 'components/pages/borrow/BorrowingError'
 import BorrowNumber from 'components/pages/borrow/BorrowNumber'
 import PlaceBorrowBook from 'components/pages/borrow/PlaceBorrowBook'
 
 import Return from 'components/pages/return/Return'
 import ReturnComplete from 'components/pages/return/ReturnComplete'
 import Returning from 'components/pages/return/Returning'
+import ReturningError from 'components/pages/return/ReturningError'
 import ReturnNumber from 'components/pages/return/ReturnNumber'
 import PlaceReturnBook from 'components/pages/return/PlaceReturnBook'
 
@@ -45,6 +47,10 @@ export default new Router({
           name: 'Borrowing',
           component: Borrowing
         },{
+          path: 'Error',
+          name: 'BorrowingError',
+          component: BorrowingError
+        },{
           path: 'Number',
           name: 'BorrowNumber',
           component: BorrowNumber
@@ -68,6 +74,10 @@ export default new Router({
           path: 'Returning',
           name: 'Returning',
           component: Returning
+        },{
+          path: 'Error',
+          name: 'ReturningError',
+          component: ReturningError
         },{
           path: 'Number',
           name: 'ReturnNumber',

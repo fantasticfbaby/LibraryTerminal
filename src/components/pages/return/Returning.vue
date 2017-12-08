@@ -45,7 +45,7 @@
 
         </el-col>
       </el-row>
-      <router-link :to="{name:'ReturnComplete'}">next</router-link>
+      <router-link :to="{name:'ReturningError'}">next</router-link>
 
 
     </div>
@@ -64,13 +64,13 @@
     data() {
       return {
         tableData: [{
-          title: '1.图书A',
+          title: '1.人性的弱点',
           status: 'success'
         }, {
-          title: '2.图书A',
+          title: '2.第一行代码 Android 第2版',
           status: 'processing'
         }, {
-          title: '3.图书A',
+          title: '3.Java语言程序设计',
           status: 'waiting'
         }]
       }

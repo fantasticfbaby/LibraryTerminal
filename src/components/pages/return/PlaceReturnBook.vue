@@ -72,11 +72,15 @@
       return {
         tableData: [{
           id: '001',
-          title: '图书A',
+          title: '人性的弱点',
           remark: '超期，应还日期：2017-01-01'
         }, {
           id: '002',
-          title: '图书B',
+          title: '第一行代码 Android 第2版',
+          remark: '应还日期：2017-12-01'
+        }, {
+          id: '003',
+          title: 'Java语言程序设计',
           remark: '应还日期：2017-12-01'
         }]
       }

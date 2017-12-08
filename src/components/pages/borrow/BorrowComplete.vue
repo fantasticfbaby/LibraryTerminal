@@ -12,7 +12,7 @@
         <el-col :span="21">
           <el-row style="border: 2px solid #fff; background: #44a4df; font-weight: bold">
             <el-col>
-              <p>姓名:林海瑞&nbsp;&nbsp;证号:2015210405043&nbsp;&nbsp;可借数量:10&nbsp;&nbsp;成功:1;&nbsp;&nbsp;失败:0</p>
+              <p>姓名:林海瑞&nbsp;&nbsp;证号:2015210405043&nbsp;&nbsp;可借数量:10&nbsp;&nbsp;成功:3;&nbsp;&nbsp;失败:0</p>
             </el-col>
           </el-row>
         </el-col>
@@ -43,7 +43,6 @@
 
       <el-row class="btn-group" type="flex" justify="end">
           <el-button type="warning" class="btn" @click="$router.push({name:'Index'})">退出</el-button>
-        </el-col>
       </el-row>
 
     </div>
@@ -63,8 +62,16 @@
       return {
         tableData: [{
           id: '001',
-          title: '图书A',
-          remark: ''
+          title: '人性的弱点',
+          remark: '成功，应还日期：2017-12-07'
+        }, {
+          id: '002',
+          title: '第一行代码 Android 第2版',
+          remark: '成功，应还日期：2017-12-07'
+        }, {
+          id: '003',
+          title: 'Java语言程序设计',
+          remark: '成功，应还日期：2017-12-07'
         }]
       }
     },
