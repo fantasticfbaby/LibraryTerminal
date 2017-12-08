@@ -44,7 +44,7 @@
             </el-col>
             <el-col :span="2" style="margin-top: 130px;">
               <span>读到
-                <span style="font-size: 30px; font-weight: bold; color: red;">2</span>
+                <span style="font-size: 30px; font-weight: bold; color: red;">{{$route.params.number}}</span>
                 本
               </span>
             </el-col>
@@ -81,10 +81,12 @@
       return {
         tableData: [{
           id: '001',
-          title: '图书A',
+          title: '人性的弱点',
           remark: ''
         }]
       }
+    },
+    created() {
     },
     components: {
       ElButton,

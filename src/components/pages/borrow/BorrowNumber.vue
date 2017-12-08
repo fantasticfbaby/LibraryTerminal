@@ -16,7 +16,7 @@
         </el-col>
 
         <el-col :span="12">
-          <button class="btnNum" style="" v-for="item in 10" :key="item" @click="$router.push({name:'PlaceBorrowBook'})">{{item}}本</button>
+          <button class="btnNum" style="" v-for="item in 10" :key="item" @click="$router.push({name:'PlaceBorrowBook', params: {number:item}})">{{item}}本</button>
         </el-col>
       </el-row>
 

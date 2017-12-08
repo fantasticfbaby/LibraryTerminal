@@ -88,8 +88,6 @@
         font-size: 25px;
       }
     }
-
-
   }
 
   .el-button {

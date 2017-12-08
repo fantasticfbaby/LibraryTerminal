@@ -10,7 +10,7 @@
       </el-row>
       <el-row type="flex" justify="center" class="btnRow">
         <el-col :span="12">
-          <el-button class="btnNum" v-for="item in 5" :key="item" @click="$router.push({name:'PlaceReturnBook'})">{{item}}本</el-button>
+          <el-button class="btnNum" v-for="item in 5" :key="item" @click="$router.push({name:'PlaceReturnBook', params: {number: item}})">{{item}}本</el-button>
         </el-col>
       </el-row>
 

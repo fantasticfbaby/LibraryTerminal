@@ -49,7 +49,7 @@ export default new Router({
           name: 'BorrowNumber',
           component: BorrowNumber
         },{
-          path: 'Place',
+          path: 'Place/:number',
           name: 'PlaceBorrowBook',
           component: PlaceBorrowBook
         },
@@ -73,7 +73,7 @@ export default new Router({
           name: 'ReturnNumber',
           component: ReturnNumber
         },{
-          path: 'Place',
+          path: 'Place/:number',
           name: 'PlaceReturnBook',
           component: PlaceReturnBook
         },
